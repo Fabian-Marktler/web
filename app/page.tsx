@@ -1,13 +1,21 @@
+import About from "./components/About";
+import Contact from "./components/Contact";
+import Experience from "./components/Experience";
 import Hero from "./components/Hero";
+import Independent from "./components/Independent";
+import Services from "./components/Services";
 import Trust from "./components/Trust";
 
 export default function Home() {
   return (
-    <main>
-      <div className="flex flex-col">
+      <main className="flex flex-col">
         <Hero></Hero>
-        <Trust></Trust>
-      </div>
-    </main>
+        <div className="hidden lg:block"><Trust></Trust></div>
+        <About></About>
+        <Independent></Independent>
+        <Experience></Experience>
+        <Services></Services>
+        <Contact></Contact>
+      </main>
   );
 }
