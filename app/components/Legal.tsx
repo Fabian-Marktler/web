@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from "next/link";
 
 const Legal = () => {
   return (
@@ -16,11 +17,11 @@ const Legal = () => {
           </p>
           <nav className="flex gap-3 flex-wrap mt-[22px]">
             {[
-              { href: "#impressum", label: "Impressum & Offenlegung" },
+              { href: "#imprint", label: "Impressum & Offenlegung" },
               { href: "#downloads", label: "Dokumente & Downloads" },
-              { href: "#datenschutz", label: "Datenschutzerklärung" },
+              { href: "#privacy", label: "Datenschutzerklärung" },
               { href: "#agb", label: "Vertragsgrundlagen & Vollmacht" },
-              { href: "#begriffe", label: "Begriffe einfach erklärt" },
+              { href: "#terms", label: "Begriffe einfach erklärt" },
             ].map((item, idx) => (
               <a
                 key={idx}
@@ -34,11 +35,11 @@ const Legal = () => {
         </div>
       </section>
 
-      {/* Impressum Section */}
-      <section className="py-16" id="impressum">
+      {/* imprint Section */}
+      <section className="py-16" id="imprint">
         <div className="max-w-[1000px] mx-auto px-6">
           <span className="text-[12.5px] font-bold tracking-[.22em] uppercase text-petrol">
-            Impressum &amp; gesetzliche Offenlegung
+            imprint &amp; gesetzliche Offenlegung
           </span>
           <h2 className="font-display text-navy font-medium text-[clamp(24px,3.4vw,32px)] leading-[1.18] my-2">
             Fairsicherlich Versicherungskanzlei GmbH
@@ -97,7 +98,7 @@ const Legal = () => {
           <h2 className="font-display text-navy font-medium text-[clamp(24px,3.4vw,32px)] leading-[1.18] my-2">
             Unsere Vertragsunterlagen – jederzeit abrufbar.
           </h2>
-          <p className="text-muted max-w-[680px] mb-6">
+          <p className="text-muted max-w-170 mb-6">
             Diese Unterlagen erhalten Sie im Zuge der Beratung. Sie können sie hier vorab lesen und herunterladen – daneben jeweils in einfacher Sprache, was das Dokument für Sie bedeutet.
           </p>
 
@@ -133,7 +134,7 @@ const Legal = () => {
               },
             ].map((doc, idx) => (
               <div key={idx} className="grid grid-cols-1 md:grid-cols-[1.1fr_.9fr] gap-[22px] items-stretch mt-4">
-                <div className="bg-white border border-line rounded-[14px] p-6 flex flex-col gap-2">
+                <div id={doc.title} className="bg-white border border-line rounded-[14px] p-6 flex flex-col gap-2">
                   <div className="w-[44px] h-[44px] rounded-[12px] bg-navy/[0.08] text-navy flex items-center justify-center text-[20px]">
                     {doc.icon}
                   </div>
@@ -160,11 +161,11 @@ const Legal = () => {
         </div>
       </section>
 
-      {/* Datenschutz Section */}
-      <section className="py-16 pt-5" id="datenschutz">
+      {/* privacy Section */}
+      <section className="py-16 pt-5" id="privacy">
         <div className="max-w-[1000px] mx-auto px-6">
           <span className="text-[12.5px] font-bold tracking-[.22em] uppercase text-petrol">
-            Datenschutzerklärung
+            privacyerklärung
           </span>
           <h2 className="font-display text-navy font-medium text-[clamp(24px,3.4vw,32px)] leading-[1.18] my-2">
             Informationen gemäß Art 13 ff DSGVO
@@ -208,7 +209,7 @@ const Legal = () => {
             <div className="bg-white border border-line rounded-[14px] p-7">
               <h3 className="font-display text-navy text-[19px] mb-2 font-medium">Ihre Rechte</h3>
               <p className="mb-3">
-                Sie haben das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit und Widerspruch. Erteilte Einwilligungen können Sie jederzeit widerrufen. Beschwerden richten Sie an die österreichische Datenschutzbehörde, Barichgasse 40–42, 1030 Wien, www.dsb.gv.at.
+                Sie haben das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit und Widerspruch. Erteilte Einwilligungen können Sie jederzeit widerrufen. Beschwerden richten Sie an die österreichische privacybehörde, Barichgasse 40–42, 1030 Wien, www.dsb.gv.at.
               </p>
               <p className="mb-0">Zur Ausübung Ihrer Rechte genügt eine formlose Nachricht an office@fairsicherlich.at.</p>
             </div>
@@ -272,8 +273,8 @@ const Legal = () => {
         </div>
       </section>
 
-      {/* Begriffe Section */}
-      <section className="py-16 pt-5" id="begriffe">
+      {/* terms Section */}
+      <section className="py-16 pt-5" id="terms">
         <div className="max-w-[1000px] mx-auto px-6">
           <span className="text-[12.5px] font-bold tracking-[.22em] uppercase text-petrol">
             Begriffe einfach erklärt
@@ -291,7 +292,7 @@ const Legal = () => {
               ["IPID", "Ein standardisiertes Produktinformationsblatt: eine Kurzübersicht, was eine Versicherung abdeckt und was nicht – zum schnellen Vergleichen."],
               ["Prämie", "Der Betrag, den Sie für Ihren Versicherungsschutz bezahlen – monatlich, viertel- oder jährlich."],
               ["Wünsche- und Bedürfnistest", "Ein paar gezielte Fragen vor jeder Empfehlung – damit die Lösung wirklich zu Ihrem Leben passt und nicht umgekehrt."],
-              ["DSGVO", "Die europäische Datenschutz-Grundverordnung: Sie regelt, wie ich mit Ihren Daten umgehen darf – sorgsam, zweckgebunden und transparent."],
+              ["DSGVO", "Die europäische privacy-Grundverordnung: Sie regelt, wie ich mit Ihren Daten umgehen darf – sorgsam, zweckgebunden und transparent."],
             ].map(([term, desc], idx) => (
               <div key={idx} className="bg-white border border-line rounded-[12px] p-[16px_18px] text-[14.5px]">
                 <b className="block text-navy mb-[3px] text-[15.5px]">{term}</b>
@@ -307,7 +308,7 @@ const Legal = () => {
         <div className="max-w-[1000px] mx-auto px-6 flex justify-between gap-4 flex-wrap">
           <span>© 2026 Fairsicherlich Versicherungskanzlei GmbH · FN 681030 s · Graz</span>
           <span className="[&_a]:text-[#B9C6DC] [&_a:hover]:text-[#8FD6C9]">
-            <a href="fairsicherlich_neu.html" className="no-underline">Zur Startseite</a> &nbsp;·&nbsp; <a href="#impressum" className="no-underline">Impressum</a> &nbsp;·&nbsp; <a href="#datenschutz" className="no-underline">Datenschutz</a>
+            <Link href="/" className="no-underline">Zur Startseite</Link> &nbsp;·&nbsp; <Link href="#imprint" className="no-underline">imprint</Link> &nbsp;·&nbsp; <Link href="#privacy" className="no-underline">privacy</Link>
           </span>
         </div>
       </footer>

@@ -1,6 +1,6 @@
 import Image from "next/image"
-import Logo from "../../public/svgs/logo.svg"
-import Insurer from "../../public/insurer.jpeg"
+import Logo from "@/public/svgs/logo.svg"
+import Insurer from "@/public/insurer.jpeg"
 import Trust from "./Trust"
 
 const Hero = () => {
@@ -22,13 +22,13 @@ const Hero = () => {
             </p>
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-2">
               <a
-                href="#kontakt"
+                href="#Contact"
                 className="bg-[#0a1b35] hover:bg-[#122c54] text-white font-medium px-6 py-3.5 rounded-xl transition-colors shadow-sm text-center"
               >
                 Kostenlosen Versicherungscheck vereinbaren
               </a>
               <a
-                href="https://wa.me/..."
+                href="https://wa.me/436706031857"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-emerald-500 hover:bg-emerald-600 text-white font-medium px-6 py-3.5 rounded-xl transition-colors flex items-center justify-center gap-2 shadow-sm text-center"
@@ -46,10 +46,9 @@ const Hero = () => {
                 alt="Ihr Berater - Experte für Vorsorge & Schutz"
                 fill
                 priority
-                sizes="(max-width: 1024px) 100vw, 440px"
                 className="object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
+              <div className="absolute inset-0 bg-linear-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
               <div className="absolute bottom-6 left-6 right-6 text-white">
                 <p className="text-xl font-bold">Ihr Berater</p>
                 <p className="text-sm text-slate-200">Experte für Vorsorge & Schutz</p>

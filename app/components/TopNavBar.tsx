@@ -6,6 +6,7 @@ import Image from "next/image";
 import Logo from "../../public/svgs/logo.svg";
 import Burger from "../../public/svgs/burger.svg";
 import Call from "../../public/svgs/call.svg";
+import { navLinks } from '@/app/components/data/links';
 
 const phoneNumber = "06503201899";
 const company = "Fairsicherlich";
@@ -13,19 +14,9 @@ const company = "Fairsicherlich";
 const TopNavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const navLinks = [
-    { name: 'Home', href: '/' },
-    { name: 'Über mich', href: '#About' },
-    { name: 'Leistungen', href: '#Services' },
-    { name: 'Referenzen', href: '#References' },
-    { name: 'Kontakt', href: '#Contact' },
-  ];
-
   return (
     <header className="sticky top-0 z-50 w-full bg-white/95 backdrop-blur-md border-b-2 border-gray-100">
-      <div className="w-full max-w-[1400px] mx-auto h-20 px-4 sm:px-8 flex items-center justify-between lg:justify-around">
-        
-        {/* Left: Logo & Company Name */}
+      <div className="w-full max-w-350 mx-auto h-20 px-4 sm:px-8 flex items-center justify-between lg:justify-around">
         <div id="left" className="flex items-center gap-3">
           <Link href="/" className="flex items-center">
             <Image src={Logo} alt="Logo" width={36} height={36} />
@@ -34,8 +25,6 @@ const TopNavBar = () => {
             <Link href="/">{company}</Link>
           </h1>
         </div>
-
-        {/* Desktop Navigation Links */}
         <ul className="hidden lg:flex lg:items-center gap-8" id="middle">
           {navLinks.map((link) => (
             <li key={link.name} className="navItem">
